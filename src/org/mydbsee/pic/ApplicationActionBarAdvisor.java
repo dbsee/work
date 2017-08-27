@@ -36,7 +36,7 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
     private SysOpenViewAction openViewAction;
     private Action messagePopupAction;
     
-
+    private IWorkbenchAction introAction;
     public ApplicationActionBarAdvisor(IActionBarConfigurer configurer) {
         super(configurer);
     }
@@ -63,6 +63,9 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
         
         messagePopupAction = new SysMessagePopupAction("Open Message", window);
         register(messagePopupAction);
+        
+		introAction = ActionFactory.INTRO.create(window);
+		register(introAction);
     }
     
     @Override
@@ -85,6 +88,8 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
         
         // Help
         helpMenu.add(aboutAction);
+		helpMenu.add(introAction);
+		menuBar.add(helpMenu);
     }
     
     @Override

@@ -109,5 +109,38 @@
          </property>
       </product>
    </extension>
+   <extension
+         point="org.eclipse.ui.intro">
+      <intro
+            class="org.eclipse.ui.intro.config.CustomizableIntroPart"
+            id="org.mydbsee.intro">
+      </intro>
+      <introProductBinding
+            introId="org.mydbsee.intro"
+            productId="org.mydbsee.product">
+      </introProductBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro.config">
+      <config
+            introId="org.mydbsee.intro"
+            content="introContent.xml"
+            id="org.mydbsee.configId">
+         <presentation
+               home-page-id="root">
+            <implementation
+                  kind="html"
+                  os="win32,linux,macosx">
+            </implementation>
+         </presentation>
+      </config>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro.configExtension">
+      <configExtension
+            content="ext.xml"
+            configId="org.mydbsee.configId">
+      </configExtension>
+   </extension>
 
 </plugin>
