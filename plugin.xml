@@ -78,7 +78,7 @@
          point="org.eclipse.core.runtime.products">
       <product
             application="org.mydbsee.application"
-            name="RCP Product">
+            name="DbSee RCP Product">
          <property
                name="aboutText"
                value="RCP Mail template created by PDE">
@@ -90,6 +90,22 @@
          <property
                name="aboutImage"
                value="product_lg.gif">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="AppPref.ini">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="1,279,453,15">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="FF8000">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="6,260,200,16">
          </property>
       </product>
    </extension>
