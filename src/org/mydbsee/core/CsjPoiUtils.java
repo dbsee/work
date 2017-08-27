@@ -1,5 +1,3 @@
 package org.mydbsee.core;
 
-public class CsjPoiUtils {
-
-}
+public class CsjPoiUtils {}
