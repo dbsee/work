@@ -1,4 +1,4 @@
-package org.mydbsee;
+package org.mydbsee.pic;
 
 import org.eclipse.equinox.app.IApplication;
 import org.eclipse.equinox.app.IApplicationContext;

@@ -1,4 +1,4 @@
-package org.mydbsee;
+package org.mydbsee.pic.views;
 
 import java.util.ArrayList;
 import java.util.List;

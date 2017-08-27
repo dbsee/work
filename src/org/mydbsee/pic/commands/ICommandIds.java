@@ -1,4 +1,4 @@
-package org.mydbsee;
+package org.mydbsee.pic.commands;
 
 /**
  * Interface defining the application's command IDs.

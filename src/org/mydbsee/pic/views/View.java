@@ -1,4 +1,4 @@
-package org.mydbsee;
+package org.mydbsee.pic.views;
 
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.resource.JFaceResources;

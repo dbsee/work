@@ -1,4 +1,4 @@
-package org.mydbsee;
+package org.mydbsee.pic;
 
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.plugin.AbstractUIPlugin;

@@ -1,4 +1,4 @@
-package org.mydbsee;
+package org.mydbsee.pic;
 
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.GroupMarker;
@@ -16,6 +16,9 @@ import org.eclipse.ui.actions.ActionFactory;
 import org.eclipse.ui.actions.ActionFactory.IWorkbenchAction;
 import org.eclipse.ui.application.ActionBarAdvisor;
 import org.eclipse.ui.application.IActionBarConfigurer;
+import org.mydbsee.pic.actions.header.SysMessagePopupAction;
+import org.mydbsee.pic.actions.header.SysOpenViewAction;
+import org.mydbsee.pic.views.View;
 
 /**
  * An action bar advisor is responsible for creating, adding, and disposing of the
@@ -30,7 +33,7 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
     private IWorkbenchAction exitAction;
     private IWorkbenchAction aboutAction;
     private IWorkbenchAction newWindowAction;
-    private OpenViewAction openViewAction;
+    private SysOpenViewAction openViewAction;
     private Action messagePopupAction;
     
 
@@ -55,10 +58,10 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
         newWindowAction = ActionFactory.OPEN_NEW_WINDOW.create(window);
         register(newWindowAction);
         
-        openViewAction = new OpenViewAction(window, "Open Another Message View", View.ID);
+        openViewAction = new SysOpenViewAction(window, "Open Another Message View", View.ID);
         register(openViewAction);
         
-        messagePopupAction = new MessagePopupAction("Open Message", window);
+        messagePopupAction = new SysMessagePopupAction("Open Message", window);
         register(messagePopupAction);
     }
     

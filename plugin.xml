@@ -7,7 +7,7 @@
          point="org.eclipse.core.runtime.applications">
       <application>
          <run
-               class="org.mydbsee.Application">
+               class="org.mydbsee.pic.Application">
          </run>
       </application>
    </extension>
@@ -15,7 +15,7 @@
          point="org.eclipse.ui.perspectives">
       <perspective
             name="RCP Perspective"
-            class="org.mydbsee.Perspective"
+            class="org.mydbsee.pic.Perspective"
             id="org.mydbsee.perspective">
       </perspective>
    </extension>
@@ -25,14 +25,14 @@
             name="Message"
             allowMultiple="true"
             icon="icons/sample2.gif"
-            class="org.mydbsee.View"
+            class="org.mydbsee.pic.views.View"
             id="org.mydbsee.view">
       </view>
       <view
             name="Mailboxes"
             allowMultiple="true"
             icon="icons/sample3.gif"
-            class="org.mydbsee.NavigationView"
+            class="org.mydbsee.pic.views.NavigationView"
             id="org.mydbsee.navigationView">
       </view>
    </extension>

@@ -1,8 +1,10 @@
-package org.mydbsee;
+package org.mydbsee.pic;
 
 import org.eclipse.ui.IFolderLayout;
 import org.eclipse.ui.IPageLayout;
 import org.eclipse.ui.IPerspectiveFactory;
+import org.mydbsee.pic.views.NavigationView;
+import org.mydbsee.pic.views.View;
 
 public class Perspective implements IPerspectiveFactory {
 

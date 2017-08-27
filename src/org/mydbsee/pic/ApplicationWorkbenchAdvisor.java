@@ -1,5 +1,8 @@
-package org.mydbsee;
+package org.mydbsee.pic;
 
+import org.eclipse.ui.IWorkbenchPreferenceConstants;
+import org.eclipse.ui.PlatformUI;
+import org.eclipse.ui.application.IWorkbenchConfigurer;
 import org.eclipse.ui.application.IWorkbenchWindowConfigurer;
 import org.eclipse.ui.application.WorkbenchAdvisor;
 import org.eclipse.ui.application.WorkbenchWindowAdvisor;
@@ -18,6 +21,14 @@ public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
     @Override
 	public String getInitialWindowPerspectiveId() {
 		return Perspective.ID;
+	}
+
+	@Override
+	public void initialize(IWorkbenchConfigurer configurer) {
+		// TODO Auto-generated method stub
+        configurer.setSaveAndRestore(false);
+        //PlatformUI.getPreferenceStore().setValue(IWorkbenchPreferenceConstants.SHOW_INTRO, true);
 	} 
+    
 	
 }
