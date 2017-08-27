@@ -12,18 +12,17 @@ import org.eclipse.ui.PlatformUI;
 public class Application implements IApplication {
 
 	@Override
-	public Object start(IApplicationContext context) throws Exception {
+	public Object start(IApplicationContext context) {
 		Display display = PlatformUI.createDisplay();
 		try {
 			int returnCode = PlatformUI.createAndRunWorkbench(display, new ApplicationWorkbenchAdvisor());
-			if (returnCode == PlatformUI.RETURN_RESTART)
+			if (returnCode == PlatformUI.RETURN_RESTART) {
 				return IApplication.EXIT_RESTART;
-			else
-				return IApplication.EXIT_OK;
+			}
+			return IApplication.EXIT_OK;
 		} finally {
 			display.dispose();
 		}
-		
 	}
 
 	@Override
