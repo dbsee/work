@@ -14,7 +14,6 @@
 	<classpathentry kind="lib" path="lib/poi/poi-ooxml-3.17-beta1.jar"/>
 	<classpathentry kind="lib" path="lib/poi/poi-ooxml-schemas-3.17-beta1.jar"/>
 	<classpathentry kind="lib" path="lib/poi/xmlbeans-2.6.0.jar"/>
-	<classpathentry kind="lib" path="lib/log4j/log4j-1.2.17.jar"/>
 	<classpathentry kind="lib" path="lib/dom4j/dom4j-1.6.1.jar"/>
 	<classpathentry kind="lib" path="lib/dom4j/jaxen-1.1-beta-6.jar"/>
 	<classpathentry kind="lib" path="lib/zip/zip4j_1.3.2.jar"/>
@@ -30,5 +29,7 @@
 	<classpathentry kind="lib" path="lib/jfreechart/orsonpdf-1.6-eval.jar"/>
 	<classpathentry kind="lib" path="lib/jfreechart/servlet.jar"/>
 	<classpathentry kind="lib" path="lib/jfreechart/swtgraphics2d.jar"/>
+	<classpathentry kind="lib" path="lib/log4j2/log4j-api-2.9.0.jar"/>
+	<classpathentry kind="lib" path="lib/log4j2/log4j-core-2.9.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
