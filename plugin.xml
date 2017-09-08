@@ -35,6 +35,16 @@
             class="org.mydbsee.pic.views.NavigationView"
             id="org.mydbsee.navigationView">
       </view>
+      <view
+            class="org.mydbsee.pic.views.Test01View"
+            id="org.mydbsee.pic.views.Test01View"
+            name="New ViewPart01">
+      </view>
+      <view
+            class="org.mydbsee.pic.views.aaa"
+            id="org.mydbsee.pic.views.aaa"
+            name="New ViewPart">
+      </view>
    </extension>
    <extension
          point="org.eclipse.ui.commands">
