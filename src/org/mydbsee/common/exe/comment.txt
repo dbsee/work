@@ -1,0 +1,17 @@
+<if,>
+#{,}
+<when,>
+<foreach,>
+</foreach>
+<trim,>
+</trim>
+</if>
+<otherwise,>
+</otherwise>
+</when>
+<choose,>
+</choose>
+<set,>
+</set>
+<where,>
+</where>
