@@ -1,7 +1,5 @@
 package org.mydbsee.pic;
 
-import org.eclipse.ui.IWorkbenchPreferenceConstants;
-import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.application.IWorkbenchConfigurer;
 import org.eclipse.ui.application.IWorkbenchWindowConfigurer;
 import org.eclipse.ui.application.WorkbenchAdvisor;
@@ -11,16 +9,16 @@ import org.eclipse.ui.application.WorkbenchWindowAdvisor;
  * This workbench advisor creates the window advisor, and specifies
  * the perspective id for the initial window.
  */
-public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
+public class MyDbSeeApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
 	
 	@Override
     public WorkbenchWindowAdvisor createWorkbenchWindowAdvisor(IWorkbenchWindowConfigurer configurer) {
-        return new ApplicationWorkbenchWindowAdvisor(configurer);
+        return new MyDbSeeApplicationWorkbenchWindowAdvisor(configurer);
     }
     
     @Override
 	public String getInitialWindowPerspectiveId() {
-		return Perspective.ID;
+		return MyDbSeePerspective.ID;
 	}
 
 	@Override

@@ -31,5 +31,6 @@
 	<classpathentry kind="lib" path="lib/jfreechart/swtgraphics2d.jar"/>
 	<classpathentry kind="lib" path="lib/log4j2/log4j-api-2.9.0.jar"/>
 	<classpathentry kind="lib" path="lib/log4j2/log4j-core-2.9.0.jar"/>
+	<classpathentry kind="lib" path="lib/others/chardet.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

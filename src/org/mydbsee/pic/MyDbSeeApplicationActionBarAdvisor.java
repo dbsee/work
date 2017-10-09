@@ -25,7 +25,7 @@ import org.mydbsee.pic.views.View;
  * actions added to a workbench window. Each window will be populated with
  * new actions.
  */
-public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
+public class MyDbSeeApplicationActionBarAdvisor extends ActionBarAdvisor {
 
     // Actions - important to allocate these only in makeActions, and then use them
     // in the fill methods.  This ensures that the actions aren't recreated
@@ -37,7 +37,7 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
     private Action messagePopupAction;
     
     private IWorkbenchAction introAction;
-    public ApplicationActionBarAdvisor(IActionBarConfigurer configurer) {
+    public MyDbSeeApplicationActionBarAdvisor(IActionBarConfigurer configurer) {
         super(configurer);
     }
     

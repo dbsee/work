@@ -7,18 +7,18 @@ import org.osgi.framework.BundleContext;
 /**
  * The activator class controls the plug-in life cycle
  */
-public class Activator extends AbstractUIPlugin {
+public class MyDbSeeActivator extends AbstractUIPlugin {
 
 	// The plug-in ID
 	public static final String PLUGIN_ID = "org.mydbsee"; //$NON-NLS-1$
 
 	// The shared instance
-	private static Activator plugin;
+	private static MyDbSeeActivator plugin;
 	
 	/**
 	 * The constructor
 	 */
-	public Activator() {
+	public MyDbSeeActivator() {
 	}
 
 	/*
@@ -44,7 +44,7 @@ public class Activator extends AbstractUIPlugin {
 	 *
 	 * @return the shared instance
 	 */
-	public static Activator getDefault() {
+	public static MyDbSeeActivator getDefault() {
 		return plugin;
 	}
 

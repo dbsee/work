@@ -7,7 +7,7 @@
          point="org.eclipse.core.runtime.applications">
       <application>
          <run
-               class="org.mydbsee.pic.Application">
+               class="org.mydbsee.pic.MyDbSeeApplication">
          </run>
       </application>
    </extension>
@@ -15,7 +15,7 @@
          point="org.eclipse.ui.perspectives">
       <perspective
             name="RCP Perspective"
-            class="org.mydbsee.pic.Perspective"
+            class="org.mydbsee.pic.MyDbSeePerspective"
             id="org.mydbsee.perspective">
       </perspective>
    </extension>

@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Mydbsee
 Bundle-SymbolicName: org.mydbsee;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: org.mydbsee.pic.Activator
+Bundle-Activator: org.mydbsee.pic.MyDbSeeActivator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.equinox.ds,

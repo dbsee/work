@@ -5,7 +5,6 @@ import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PartInitException;
-import org.mydbsee.pic.Activator;
 import org.mydbsee.pic.commands.ICommandIds;
 
 
@@ -23,7 +22,7 @@ public class SysOpenViewAction extends Action {
 		setId(ICommandIds.CMD_OPEN);
         // Associate the action with a pre-defined command, to allow key bindings.
 		setActionDefinitionId(ICommandIds.CMD_OPEN);
-		setImageDescriptor(org.mydbsee.pic.Activator.getImageDescriptor("/icons/sample2.gif"));
+		setImageDescriptor(org.mydbsee.pic.MyDbSeeActivator.getImageDescriptor("/icons/sample2.gif"));
 	}
 	
 	@Override

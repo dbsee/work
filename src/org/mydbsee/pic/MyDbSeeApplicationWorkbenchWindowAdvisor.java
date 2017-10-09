@@ -11,19 +11,19 @@ import org.eclipse.ui.application.ActionBarAdvisor;
 import org.eclipse.ui.application.IActionBarConfigurer;
 import org.eclipse.ui.application.IWorkbenchWindowConfigurer;
 import org.eclipse.ui.application.WorkbenchWindowAdvisor;
-import org.mydbsee.pic.common.sys.CacheImage;
-import org.mydbsee.pic.common.sys.HookSysTray;
-import org.mydbsee.pic.common.sys.IAppConstants;
+import org.mydbsee.pic.sys.common.HookSysTray;
+import org.mydbsee.pic.sys.common.IAppConstants;
+import org.mydbsee.pic.sys.common.MyCacheImage;
 
-public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
+public class MyDbSeeApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
 	private HookSysTray hookSysTray;
-    public ApplicationWorkbenchWindowAdvisor(IWorkbenchWindowConfigurer configurer) {
+    public MyDbSeeApplicationWorkbenchWindowAdvisor(IWorkbenchWindowConfigurer configurer) {
         super(configurer);
     }
 
     @Override
     public ActionBarAdvisor createActionBarAdvisor(IActionBarConfigurer configurer) {
-        return new ApplicationActionBarAdvisor(configurer);
+        return new MyDbSeeApplicationActionBarAdvisor(configurer);
     }
     
     @Override
@@ -44,7 +44,7 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
 	@Override
 	public void postWindowOpen() {
 		// TODO Auto-generated method stub
-		// ÉèÖÃ´°¿Ú×Ô¶¯¾ÓÖÐ
+		// ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½
 		Shell shell = getWindowConfigurer().getWindow().getShell();
 		Rectangle screenSize = Display.getDefault().getClientArea();
 		Rectangle frameSize = shell.getBounds();
@@ -68,6 +68,6 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
 	public void dispose() {
 		// TODO Auto-generated method stub
 		hookSysTray.Dispose();
-		CacheImage.getINSTANCE().dispose();
+		MyCacheImage.getINSTANCE().dispose();
 	}
 }

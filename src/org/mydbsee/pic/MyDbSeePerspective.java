@@ -6,7 +6,7 @@ import org.eclipse.ui.IPerspectiveFactory;
 import org.mydbsee.pic.views.NavigationView;
 import org.mydbsee.pic.views.View;
 
-public class Perspective implements IPerspectiveFactory {
+public class MyDbSeePerspective implements IPerspectiveFactory {
 
 	/**
 	 * The ID of the perspective as specified in the extension.

@@ -1,17 +1,17 @@
-package org.mydbsee.pic.actions.sys;
+package org.mydbsee.pic.sys.actions;
 
 import org.eclipse.jface.action.Action;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
-import org.mydbsee.pic.common.sys.IAppConstants;
-import org.mydbsee.pic.common.sys.IImageKey;
+import org.mydbsee.pic.sys.common.IAppConstants;
+import org.mydbsee.pic.sys.common.IImageKey;
 
 public class SysLogoffAction extends Action {
 
 	public SysLogoffAction() {
 		setId("cn.edu.jfcs.actions.logoff");
-		setText("用户注销[&R]");
-		setToolTipText("用户注销");
+		setText("鐢ㄦ埛娉ㄩ攢[&R]");
+		setToolTipText("鐢ㄦ埛娉ㄩ攢");
 		setImageDescriptor(AbstractUIPlugin.imageDescriptorFromPlugin(
 				IAppConstants.APPLICATION_ID,IImageKey.LOGOFF));
 	}

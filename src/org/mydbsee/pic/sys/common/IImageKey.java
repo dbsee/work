@@ -1,4 +1,4 @@
-package org.mydbsee.pic.common.sys;
+package org.mydbsee.pic.sys.common;
 
 public interface IImageKey {
 	public static final String ICONSPATH="icons/";

@@ -1,13 +1,13 @@
 /**
  *
  */
-package org.mydbsee.core.cst.reg;
+package org.mydbsee.common;
 
 /**
  * @author csj
  *
  */
-public interface IRegConstNum {
+public interface IConstRegNum {
 
 	// 非负整数（正整数 +0） 
 	public static final String NUM_01 = "^\\d+$";

@@ -1,7 +1,4 @@
-package org.mydbsee.pic.common.sys;
-
-import java.util.Timer;
-import java.util.TimerTask;
+package org.mydbsee.pic.sys.common;
 
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.IMenuManager;
@@ -13,21 +10,18 @@ import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.swt.widgets.ToolTip;
 import org.eclipse.swt.widgets.Tray;
 import org.eclipse.swt.widgets.TrayItem;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
-import org.mydbsee.pic.Activator;
-import org.mydbsee.pic.actions.sys.SysLogoffAction;
+import org.mydbsee.pic.sys.actions.SysLogoffAction;
 
 public class HookSysTray {
 
 	private TrayItem trayItem;
 
 	public HookSysTray() {
-
 	}
 
 	public void createSysTray(final IWorkbenchWindow window) {
@@ -38,13 +32,13 @@ public class HookSysTray {
 		}
 	}
 
-	// ×îĞ¡»¯³ÌĞò´°¿Ú
+	// æœ€å°åŒ–ç¨‹åºçª—å£
 	public void windowMinimized(final Shell shell) {
 		shell.setMinimized(true);
 		shell.setVisible(false);
 	}
 
-	// ×îĞ¡»¯³ÌĞòµ½ÍĞÅÌ
+	// æœ€å°åŒ–ç¨‹åºåˆ°æ‰˜ç›˜
 	private void trayMinimize(final IWorkbenchWindow window) {
 		window.getShell().addShellListener(new ShellAdapter() {
 			public void shellIconified(ShellEvent e) {
@@ -62,7 +56,7 @@ public class HookSysTray {
 		});
 	}
 
-	// ÍĞÅÌµ¯³ö²Ëµ¥
+	// æ‰˜ç›˜å¼¹å‡ºèœå•
 	private void trayPopupMenu(final IWorkbenchWindow window) {
 		trayItem.addListener(SWT.MenuDetect, new Listener() {
 			public void handleEvent(Event event) {
@@ -74,10 +68,10 @@ public class HookSysTray {
 		});
 	}
 
-	// ¹¹ÔìÍĞÅÌ²Ëµ¥Ïî
+	// æ„é€ æ‰˜ç›˜èœå•é¡¹
 	private void fillTrayItem(IMenuManager trayItem,
 			final IWorkbenchWindow window) {
-		Action exitSystem = new Action("ÍË³öÏµÍ³[&E]", AbstractUIPlugin
+		Action exitSystem = new Action("é€€å‡ºç³»ç»Ÿ[&E]", AbstractUIPlugin
 				.imageDescriptorFromPlugin(IAppConstants.APPLICATION_ID,
 						IImageKey.EXIT_SYSTEM)) {
 			public void run() {
@@ -88,31 +82,14 @@ public class HookSysTray {
 		trayItem.add(exitSystem);
 	}
 
-	// ³õÊ¼»¯ÍĞÅÌÏîÄ¿µÄÎÄ×ÖºÍÍ¼±ê
-	private TrayItem initTrayItem(final IWorkbenchWindow window) {
+	// åˆå§‹åŒ–æ‰˜ç›˜é¡¹ç›®çš„æ–‡å­—å’Œå›¾æ ‡
+	private TrayItem initTrayItem(IWorkbenchWindow window) {
 		final Tray tray = window.getShell().getDisplay().getSystemTray();
 		if (tray == null)
 			return null;
 		trayItem = new TrayItem(tray, SWT.NONE);
-		trayItem.setImage(CacheImage.getINSTANCE().getImage(
-				Activator.PLUGIN_ID, IImageKey.WINDOW_IMAGE));
-		// ¶¨Ê±ÏÔÊ¾ÆøÅİÌáÊ¾ÎÄ±¾
-		Timer timer = new Timer();
-		timer.schedule(new TimerTask() {
-			public void run() {
-				window.getShell().getDisplay().syncExec(new Runnable() {
-					public void run() {
-						ToolTip tip = new ToolTip(window.getShell(),
-								SWT.BALLOON | SWT.ICON_INFORMATION);
-						tip.setAutoHide(true);
-						tip.setMessage(IAppConstants.APPLICATION_TITLE);
-						tip.setText("»¶Ó­Ê¹ÓÃ");
-						trayItem.setToolTip(tip);
-						tip.setVisible(true);
-					}
-				});
-			}
-		}, 0, 30 * 60 * 1000);
+		trayItem.setImage(MyCacheImage.getINSTANCE().getImage(IImageKey.WINDOW_IMAGE));
+		trayItem.setToolTipText(IAppConstants.APPLICATION_TITLE);
 		return trayItem;
 	}
 

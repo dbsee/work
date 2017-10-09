@@ -1,7 +1,7 @@
-package org.mydbsee.pic.common.sys;
+package org.mydbsee.pic.sys.common;
 
 public interface IAppConstants {
-	public static final String APPLICATION_TITLE="高校经费测算系统";
+	public static final String APPLICATION_TITLE="锟斤拷校锟斤拷锟窖诧拷锟斤拷系统";
 	public static final String APPLICATION_ID = "cn.edu.jfcs";
 	public static final String PIE_DIAGRAM_VIEW_ID = "cn.edu.jfcs.ui.piediagram";
 	public static final String TEACH_UNIT_CLASS_VIEW_ID = "cn.edu.jfcs.ui.teachunitclass";

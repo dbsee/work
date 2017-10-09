@@ -1,13 +1,13 @@
 /**
  * 
  */
-package org.mydbsee.core.cst.db.col.type;
+package org.mydbsee.db.col.type;
 
 /**
  * @author csj
  *
  */
-public interface IDbColTypeSqlServer {
+public interface IConstDbColTypeSqlServer {
 
     /** SQL_SERVER DB COLUMN TYPE BIGINT */
     public static final String TYPE_BIGINT = "BIGINT";

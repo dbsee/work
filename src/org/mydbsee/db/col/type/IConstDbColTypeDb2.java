@@ -1,13 +1,13 @@
 /**
  *
  */
-package org.mydbsee.core.cst.db.col.type;
+package org.mydbsee.db.col.type;
 
 /**
  * @author csj
  *
  */
-public interface IDbColTypeDb2 {
+public interface IConstDbColTypeDb2 {
 
 
 	/** DB2 DB COLUMN TYPE ARRAY */

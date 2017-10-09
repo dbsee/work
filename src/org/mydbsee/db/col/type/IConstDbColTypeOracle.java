@@ -1,13 +1,13 @@
 /**
  *
  */
-package org.mydbsee.core.cst.db.col.type;
+package org.mydbsee.db.col.type;
 
 /**
  * @author csj
  *
  */
-public interface IDbColTypeOracle {
+public interface IConstDbColTypeOracle {
 
 	/** ORACLE DB COLUMN TYPE BINARY_DOUBLE */
 	public static final String TYPE_BINARY_DOUBLE = "BINARY_DOUBLE";

@@ -17,7 +17,7 @@ public class SysMessagePopupAction extends Action {
         setId(ICommandIds.CMD_OPEN_MESSAGE);
         // Associate the action with a pre-defined command, to allow key bindings.
         setActionDefinitionId(ICommandIds.CMD_OPEN_MESSAGE);
-        setImageDescriptor(org.mydbsee.pic.Activator.getImageDescriptor("/icons/sample3.gif"));
+        setImageDescriptor(org.mydbsee.pic.MyDbSeeActivator.getImageDescriptor("/icons/sample3.gif"));
     }
 
     @Override
